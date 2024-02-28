@@ -4,6 +4,17 @@ import { getProvider, getConfig, toWeiSafe, formatUnits } from "utils";
 // Загружаем ABI из внешнего файла
 const erc20Abi = require('../abi/erc20Abi.json');
 
+export async function getNativeBalance(
+  chainId,
+  account,
+  blockNumber = "latest"
+) {
+  const provider = getProvider(chainId);
+  const balance = await provider.getBalance(account, blockNumber);
+
+  return balance;
+}
+
 /**
  * @param chainId The chain Id of the chain to query
  * @param account The account to query the balance of.

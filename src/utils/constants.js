@@ -160,7 +160,7 @@ export const updateTokenList = async () => {
   try {
     const response = await fetch('https://gateway.ipfs.io/ipns/tokens.uniswap.org');
     const data = await response.json();
-    // console.log(data.tokens)
+
     return [
       ...data.tokens,
     ];
@@ -174,13 +174,6 @@ export const updateTokenList = async () => {
 updateTokenList().then((updatedTokenList) => {
   tokenList = updatedTokenList;
 });
-// export const tokenList = [
-
-
-//   const tokenInfo = 
-
-
-// ];
 
 export const amplitudeAPIKey = process.env.REACT_APP_AMPLITUDE_KEY
   ? process.env.REACT_APP_AMPLITUDE_KEY
@@ -207,6 +200,7 @@ export const walletConnectProjectId =
   process.env.REACT_APP_WALLET_CONNECT_PROJECT_ID;
 export const MAX_APPROVAL_AMOUNT = ethers.constants.MaxUint256;
 export const AddressZero = ethers.constants.AddressZero;
+export const EthAddress = process.env.ETH_ADDRESS || "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
 
 export function isSupportedChainId(chainId) {
   return Object.values(ChainId).includes(chainId);

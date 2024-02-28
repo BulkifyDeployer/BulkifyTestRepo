@@ -103,6 +103,5 @@ export const TransferForm = ({
         }
       </CardWrapper>
     </SectionWrapper>
-
   )
 }
