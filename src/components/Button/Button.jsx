@@ -8,7 +8,7 @@ const sizeMap = {
     height: "64px",
     padding: "0px 40px",
     gap: "4px",
-    borderRadius: "32px",
+    borderRadius: "10px",
     mobileSize: "md",
   },
   md: {
@@ -17,7 +17,7 @@ const sizeMap = {
     height: "40px",
     padding: "0px 20px",
     gap: "6px",
-    borderRadius: "20px",
+    borderRadius: "8px",
     mobileSize: "sm",
   },
   sm: {
@@ -26,7 +26,7 @@ const sizeMap = {
     height: "40px",
     padding: "0px 16px 1px 16px",
     gap: "4px",
-    borderRadius: "20px",
+    borderRadius: "8px",
     mobileSize: "sm",
   },
 }
@@ -76,7 +76,7 @@ export const UnstyledButton = styled(BaseButton)`
   padding: 0;
   height: auto;
   color: ${({ textColor = "text" }) => COLORS[textColor]};
-  
+
   @media ${QUERIESV2.sm.andDown} {
     padding: 0;
   }
@@ -85,7 +85,7 @@ export const UnstyledButton = styled(BaseButton)`
 export const PrimaryButton = styled(BaseButton)`
   color: ${({ textColor = "text" }) => COLORS[textColor]};
   border: none;
-  background-color: ${({ backgroundColor = "gradient" }) =>
+  background: ${({ backgroundColor = "gradient" }) =>
     COLORS[backgroundColor]};
 
   &:hover:not(:disabled) {

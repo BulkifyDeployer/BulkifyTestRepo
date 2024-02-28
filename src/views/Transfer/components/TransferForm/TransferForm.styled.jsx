@@ -9,6 +9,7 @@ export const InputBlockWrapper = styled.div`
   width: 100%;
   padding: 8px 12px;
   background: var(--color-dark);
+  border-radius: 8px;
 `;
 
 export const AddTokenButton = styled(UnstyledButton)`
