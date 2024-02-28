@@ -75,7 +75,8 @@ export const UnstyledButton = styled(BaseButton)`
   border: none;
   padding: 0;
   height: auto;
-
+  color: ${({ textColor = "text" }) => COLORS[textColor]};
+  
   @media ${QUERIESV2.sm.andDown} {
     padding: 0;
   }

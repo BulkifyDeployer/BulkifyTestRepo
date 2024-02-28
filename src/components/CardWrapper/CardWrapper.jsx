@@ -21,7 +21,6 @@ const Card = styled.div`
   @media ${QUERIESV2.sm.andDown} {
     padding: 12px 16px 16px;
     gap: 16px;
-    margin-top: -4px;
   }
 `
 const CardBorder = styled.div`

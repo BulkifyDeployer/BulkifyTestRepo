@@ -76,9 +76,9 @@ export const Item = styled(UnstyledLink)`
     ::after {
       content: "";
       position: absolute;
-      top: 56px;
+      top: 27px;
       left: 50%;
-      width: 4px;
+      width: 18px;
       height: 4px;
       border-radius: 2px;
       background-color: ${COLORS.secondary};
