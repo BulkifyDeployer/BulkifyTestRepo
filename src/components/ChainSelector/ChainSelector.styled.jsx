@@ -35,6 +35,7 @@ export const DropDownInnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 8px;
+    
 `
 
 export const DropDownButton = styled.button`
@@ -44,10 +45,14 @@ export const DropDownButton = styled.button`
   width: 100%;
   transition-property: color;
   transition-duration: 75ms;
+  background: inherit;
+  border: none;
+  color: inherit;
 
   &:hover{
     background-color: var(--color-dark-gray-50); 
     color: var(--color-secondary);
+    border-radius: 8px;
   }
 
   > img {

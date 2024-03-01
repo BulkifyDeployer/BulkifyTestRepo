@@ -1,4 +1,3 @@
-import React from "react";
 import { useLocation } from "react-router-dom";
 import { Stats } from "./components/Stats";
 import { Layout } from "components";

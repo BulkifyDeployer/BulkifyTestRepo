@@ -30,7 +30,7 @@ export const SelectorButton = styled.button`
   border-radius: 9999px;
   padding: 1px;
   font-size: ${14 / 16}rem;
-
+  border: none;  
   color: var(--color-white);
   background: var(--color-dark-gray);
 

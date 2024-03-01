@@ -9,23 +9,25 @@ import {
   FeesCalcWrapper,
   FeesItem
 } from './TransferForm.styled';
-import { ConnectWalletButton, TransferButton } from '../ConnectWalletButton';
-import { CardWrapper, SectionWrapper } from 'components';
-import { Divider } from 'views/Transfer/Transfer.styled';
-import { TransferInputBlock } from '../TransferInputBlock';
+import {ConnectWalletButton, TransferButton} from '../ConnectWalletButton';
+import {CardWrapper, SectionWrapper} from 'components';
+import {Divider} from 'views/Transfer/Transfer.styled';
+import {TransferInputBlock} from '../TransferInputBlock';
+import {TransferModal} from "../TransferModal";
 
 export const TransferForm = ({
-  isConnected,
-  isWrongNetwork
-}) => {
+                               isConnected,
+                               isWrongNetwork
+                             }) => {
 
   return (
     <SectionWrapper title="Transfer">
+      <TransferModal/>
       <CardWrapper>
         Transfer Tokens
-        <Divider />
+        <Divider/>
         <InputBlockWrapper>
-          <TransferInputBlock />
+          <TransferInputBlock/>
 
         </InputBlockWrapper>
         <AddTokenButton
@@ -49,9 +51,9 @@ export const TransferForm = ({
             />
           </ReceiverInputWrapper>
         </ReceiverWrapper>
-        <Divider />
+        <Divider/>
         Transaction Details
-        <Divider />
+        <Divider/>
         <FeesBlockWrapper>
           <CustomLabel
             weight={600}
@@ -91,14 +93,14 @@ export const TransferForm = ({
 
         </FeesBlockWrapper>
 
-        <Divider />
+        <Divider/>
         {!isConnected ?
           (
-            <ConnectWalletButton reasonToConnect={"Transfer"} />
+            <ConnectWalletButton reasonToConnect={"Transfer"}/>
           )
           :
           (
-            <TransferButton />
+            <TransferButton/>
           )
         }
       </CardWrapper>

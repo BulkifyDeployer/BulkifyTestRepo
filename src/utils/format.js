@@ -1,4 +1,4 @@
-import { BigNumber, ethers } from "ethers";
+import {BigNumber, ethers} from "ethers";
 import assert from "assert";
 import numeral from "numeral";
 
@@ -106,9 +106,9 @@ export function formatUnits(
   maxFractions
 ) {
   const value = Number(ethers.utils.formatUnits(wei, decimals));
-  if (value >= 1000) {
-    return veryLargeNumberFormatter(value, maxFractions?.xl);
-  }
+  // if (value >= 1000) {
+  //   return veryLargeNumberFormatter(value, maxFractions?.xl);
+  // }
   if (value >= 1) {
     return largeNumberFormatter(value, maxFractions?.l);
   }
@@ -119,6 +119,7 @@ export function formatUnitsFnBuilder(decimals) {
   function closure(wei) {
     return formatUnits(wei, decimals);
   }
+
   return closure;
 }
 
@@ -142,6 +143,7 @@ export function parseUnitsFnBuilder(decimals) {
   function closure(value) {
     return parseUnits(value, decimals);
   }
+
   return closure;
 }
 

@@ -1,18 +1,10 @@
-import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useConnection, useIsWrongNetwork } from "hooks";
-import { useAmountInput, useValidAmount } from "./useAmountInput";
-
 
 export const useTransferView = () => {
-  const { isConnected, provider } = useConnection();
-  const { isWrongNetwork, isWrongNetworkHandler } = useIsWrongNetwork();
 
-  const { amountValidationError, isAmountValid } = useValidAmount(
-    parsedAmount,
-    maxBalance,
-  );
-
+  const { isConnected, provider, chainId, account } = useConnection();
+  const { isWrongNetwork, isWrongNetworkHandler } = useIsWrongNetwork(chainId);
 
 
   return {
@@ -20,6 +12,6 @@ export const useTransferView = () => {
     isWrongNetworkHandler,
     isConnected,
     provider,
-    // amountValidationError,
+
   }
 }

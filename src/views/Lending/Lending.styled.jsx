@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: row-reverse;
   gap: 26px;
-  padding: 36px 0px;
+  padding: 36px 0;
   justify-content: space-between;
 
   @media ${QUERIESV2.tb.andDown} {

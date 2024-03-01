@@ -61,6 +61,7 @@ export function useAmountInput(chainId, tokenSymbol) {
     parsedAmount,
     balance,
     maxBalance,
+    userAmountInput,
   };
 }
 

@@ -1,0 +1,1 @@
+import {  Wrapper} from './TransferModal.styled';export const TransferModal = () => {  }

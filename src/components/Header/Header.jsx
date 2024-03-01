@@ -55,7 +55,7 @@ export const Header = ({
             to={{ pathname: "/", search: location.search }}
             style={{ display: "flex", alignItems: "center", gap: "10px" }}
           >
-            <Logo className="h-8 w-auto" />
+            <Logo width={'25px'} height={'25px'} />
             <LogoText>Bulkify</LogoText>
           </UnstyledLink>
 

@@ -1,9 +1,9 @@
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, Suspense } from 'react';
 import { Route, Routes as Routers } from 'react-router-dom';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Header, SuperHeader, Sidebar, BouncingDotsLoader } from 'components';
 import { useError, useConnection } from 'hooks';
-import tw from "tailwind-styled-components";
+import styled from "@emotion/styled";
 import { WrongNetworkError, generalMaintanceMessage, stringValueInArray, getConfig } from 'utils';
 import lazyWithRetry from 'utils/lazy-with-retry';
 import NotFound from './views/NotFound';
@@ -26,7 +26,7 @@ function useRoutes() {
   const { provider, isContractAddress } = useConnection();
   const location = useLocation();
   const { error, removeError } = useError();
-  // const config = getConfig();
+  const config = getConfig();
 
   return {
     openSidebar,
@@ -38,7 +38,7 @@ function useRoutes() {
     isHomepage: location.pathname === "/",
     isTransfer: location.pathname === "/transfer",
     isContractAddress,
-    // config
+    config
   }
 }
 
@@ -49,7 +49,7 @@ const Routes = () => {
     error,
     removeError,
     location,
-    // config,
+    config,
     isContractAddress,
     isHomepage,
     isTransfer,
@@ -85,8 +85,8 @@ const Routes = () => {
 
 export default Routes;
 
-const RemoveErrorSpan = tw.span`
-  cursor-pointser
-  text-sm
-  font-semibold
+const RemoveErrorSpan = styled.span`
+  cursor: pointer;
+  font-size: ${16 / 16}rem;
+  font-weight: 500;
 `

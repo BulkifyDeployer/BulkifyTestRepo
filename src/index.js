@@ -7,7 +7,7 @@ import "./onboard-override.css";
 import { ErrorProvider, OnboardProvider } from 'hooks';
 // import {AmplitudeProvider } from 'hooks';
 // import { enableReactQueryDevTools } from "utils";
-import './index.css';
+// import './index.css';
 // import Sentry from "utils/sentry";
 import App from './App';
 

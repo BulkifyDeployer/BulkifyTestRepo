@@ -87,6 +87,15 @@ const globalStyles = css`
     // background-color: var(--color-dark-gray);
     // background-position: center center;
   }
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+  input {
+    background: none;
+    outline: none;
+    border: none;
+  }
   // iphone query
   @media screen and (-webkit-min-device-pixel-ratio: 2) {
     select,

@@ -28,7 +28,9 @@ const CloseButton = styled.button`
   border-radius: 20px;
   cursor: pointer;
   outline: none;
-
+  color: white;
+  stroke: ${COLORS.white};
+    
   svg {
     width: 25px;
   }

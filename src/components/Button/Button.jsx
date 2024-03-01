@@ -44,7 +44,7 @@ const BaseButton = styled.button`
   padding: ${({ size = "lg" }) => sizeMap[size].padding};
   gap: ${({ size = "lg" }) => sizeMap[size].gap};
   border-radius: ${({ size = "lg" }) => sizeMap[size].borderRadius};
-
+  
   background-color: transparent;
 
   &:hover:not(:disabled) {
